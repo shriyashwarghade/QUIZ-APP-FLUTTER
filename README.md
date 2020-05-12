@@ -7,11 +7,11 @@ Questions are saved in lib/ques.dart files in json format.
 # Screenshots
 ![alt text](https://github.com/shriyashwarghade/QUIZ-APP-FLUTTER/blob/master/screenshot/Screenshot_1589297271.jpg)
 
-![alt text](https://github.com/shriyashwarghade/QUIZ-APP-FLUTTER/screenshot/Screenshot_1589297279.png?raw=true)
+![alt text](https://github.com/shriyashwarghade/QUIZ-APP-FLUTTER/blob/master/screenshot/Screenshot_1589297279.jpg)
 
-![alt text](https://github.com/shriyashwarghade/QUIZ-APP-FLUTTER/screenshot/Screenshot_1589297287.png?raw=true)
+![alt text](https://github.com/shriyashwarghade/QUIZ-APP-FLUTTER/blob/master/screenshot/Screenshot_1589297287.jpg)
 
-![alt text](https://github.com/shriyashwarghade/QUIZ-APP-FLUTTER/screenshot/Screenshot_1589297290.png?raw=true)
+![alt text](https://github.com/shriyashwarghade/QUIZ-APP-FLUTTER/blob/master/screenshot/Screenshot_1589297290.jpg)
 
 
 ## Getting Started
