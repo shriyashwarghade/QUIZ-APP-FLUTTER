@@ -5,13 +5,7 @@ This is a quiz app that generates 3 questions per quiz.The result is finally dis
 Questions are saved in lib/ques.dart files in json format.
 
 # Screenshots
-![alt text](https://github.com/shriyashwarghade/QUIZ-APP-FLUTTER/blob/master/screenshot/Screenshot_1589297271.jpg)
-
-![alt text](https://github.com/shriyashwarghade/QUIZ-APP-FLUTTER/blob/master/screenshot/Screenshot_1589297279.jpg)
-
-![alt text](https://github.com/shriyashwarghade/QUIZ-APP-FLUTTER/blob/master/screenshot/Screenshot_1589297287.jpg)
-
-![alt text](https://github.com/shriyashwarghade/QUIZ-APP-FLUTTER/blob/master/screenshot/Screenshot_1589297290.jpg)
+![alt text](https://github.com/shriyashwarghade/QUIZ-APP-FLUTTER/blob/master/screenshot/Screenshot_1589297271.jpg) ![alt text](https://github.com/shriyashwarghade/QUIZ-APP-FLUTTER/blob/master/screenshot/Screenshot_1589297279.jpg) ![alt text](https://github.com/shriyashwarghade/QUIZ-APP-FLUTTER/blob/master/screenshot/Screenshot_1589297287.jpg) ![alt text](https://github.com/shriyashwarghade/QUIZ-APP-FLUTTER/blob/master/screenshot/Screenshot_1589297290.jpg)
 
 
 ## Getting Started
