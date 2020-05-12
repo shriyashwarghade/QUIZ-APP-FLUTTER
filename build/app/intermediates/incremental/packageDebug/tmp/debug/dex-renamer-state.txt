@@ -1,4 +1,4 @@
-#Tue May 12 20:20:41 IST 2020
-base.0=/Users/warghade.shriyash/Documents/FutterProjects/quiz_app/build/app/intermediates/dex/debug/mergeDexDebug/out/classes.dex
+#Tue May 12 20:51:20 IST 2020
+base.0=/Users/warghade.shriyash/Documents/FutterProjects/QUIZ-APP-FLUTTER/build/app/intermediates/dex/debug/mergeDexDebug/out/classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/warghade.shriyash/Documents/FutterProjects/quiz_app/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
+            "outputFile": "/Users/warghade.shriyash/Documents/FutterProjects/QUIZ-APP-FLUTTER/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
             "map": [
                 {
-                    "source": "/Users/warghade.shriyash/Documents/FutterProjects/quiz_app/android/app/src/main/res/values/styles.xml",
+                    "source": "/Users/warghade.shriyash/Documents/FutterProjects/QUIZ-APP-FLUTTER/android/app/src/main/res/values/styles.xml",
                     "from": {
                         "startLines": "3,14",
                         "startColumns": "4,4",
