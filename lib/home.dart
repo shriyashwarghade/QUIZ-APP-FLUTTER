@@ -1,6 +1,9 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:quiz_app/components/AnswerButton.dart';
+import 'package:quiz_app/components/HeadingText.dart';
+import 'package:quiz_app/components/QuestionText.dart';
 
 import 'ques.dart';
 
@@ -30,8 +33,8 @@ class _HomeState extends State<Home> {
     setState(() {
       solvedQues += 1;
       if (value == answer) {
-          finalScore += 1;
-        }
+        finalScore += 1;
+      }
       if (solvedQues == 3) {
         isQuizStarted = false;
         score = "SCORE: $finalScore/$totalQues";
@@ -39,7 +42,7 @@ class _HomeState extends State<Home> {
         op1 = "";
         op2 = "";
         op3 = "";
-        op4 = ""; 
+        op4 = "";
       } else {
         var index = Random().nextInt(QUES.length);
         while (solvedQuesIndexes.contains(index)) {
@@ -97,148 +100,45 @@ class _HomeState extends State<Home> {
         centerTitle: true,
       ),
       // backgroundColor: _THEME_BG_COLOUR_,
-      body: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
+      body: ListView(
         children: <Widget>[
-          Column(
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Padding(
-                padding: const EdgeInsets.symmetric(
-                    vertical: 30.0, horizontal: 10.0),
-                child: Text(
-                  "Questions: $solvedQues/$totalQues".toUpperCase(),
-                  style: TextStyle(
-                    fontSize: 40.0,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.red[700],
+              Column(
+                children: <Widget>[
+                  HeadingText(
+                    "Questions: $solvedQues/$totalQues".toUpperCase(),
                   ),
-                ),
-              ),
-              Container(
-                width: screen_width,
-                child: Text(
-                  "$nextQue",
-                  softWrap: true,
-                  style: TextStyle(
-                    fontSize: 27.0,
-                    fontWeight: FontWeight.w700,
-                    color: Colors.black,
+                  QuestionText("$nextQue", screen_width),
+                  //Answer Button
+                  Column(
+                    children: <Widget>[
+                      AnswerButton(op1, isQuizStarted, check_ans, screen_width),
+                      AnswerButton(op2, isQuizStarted, check_ans, screen_width),
+                      AnswerButton(op3, isQuizStarted, check_ans, screen_width),
+                      AnswerButton(op4, isQuizStarted, check_ans, screen_width),
+                    ],
                   ),
-                  textAlign: TextAlign.center,
-                ),
-              ),
-
-              //Answer Button
-              Padding(
-                padding: const EdgeInsets.symmetric(
-                    vertical: 30.0, horizontal: 10.0),
-                child: Column(
-                  children: <Widget>[
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: MaterialButton(
-                        onPressed:
-                            isQuizStarted ? () => check_ans("$op1") : null,
-                        color: Colors.lightBlue[800],
-                        minWidth: screen_width,
-                        height: 60.0,
-                        child: Text(
-                          "$op1",
-                          style: TextStyle(
-                            fontSize: 24.0,
-                            // fontWeight: FontWeight.w700,
-                            color: Colors.white,
-                          ),
+                  HeadingText("$score".toUpperCase()),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: MaterialButton(
+                      onPressed: start_quiz,
+                      color: Colors.green[800],
+                      minWidth: screen_width,
+                      height: 50.0,
+                      child: Text(
+                        "$quiz_status",
+                        style: TextStyle(
+                          fontSize: 24.0,
+                          color: Colors.white,
                         ),
                       ),
                     ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: MaterialButton(
-                        onPressed:
-                            isQuizStarted ? () => check_ans("$op2") : null,
-                        color: Colors.lightBlue[800],
-                        minWidth: screen_width,
-                        height: 60.0,
-                        child: Text(
-                          "$op2",
-                          style: TextStyle(
-                            fontSize: 24.0,
-                            // fontWeight: FontWeight.w700,
-                            color: Colors.white,
-                          ),
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: MaterialButton(
-                        onPressed:
-                            isQuizStarted ? () => check_ans("$op3") : null,
-                        color: Colors.lightBlue[800],
-                        minWidth: screen_width,
-                        height: 60.0,
-                        child: Text(
-                          "$op3",
-                          style: TextStyle(
-                            fontSize: 24.0,
-                            // fontWeight: FontWeight.w700,
-                            color: Colors.white,
-                          ),
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: MaterialButton(
-                        onPressed:
-                            isQuizStarted ? () => check_ans("$op4") : null,
-                        color: Colors.lightBlue[800],
-                        minWidth: screen_width,
-                        height: 60.0,
-                        child: Text(
-                          "$op4",
-                          style: TextStyle(
-                            fontSize: 24.0,
-                            // fontWeight: FontWeight.w700,
-                            color: Colors.white,
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-
-              Padding(
-                padding: const EdgeInsets.symmetric(
-                    vertical: 30.0, horizontal: 10.0),
-                child: Text(
-                  "$score".toUpperCase(),
-                  style: TextStyle(
-                    fontSize: 40.0,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.red[700],
                   ),
-                ),
+                ],
               ),
-
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: MaterialButton(
-                  onPressed: start_quiz,
-                  color: Colors.green[800],
-                  minWidth: screen_width,
-                  height: 60.0,
-                  child: Text(
-                    "$quiz_status",
-                    style: TextStyle(
-                      fontSize: 24.0,
-                      color: Colors.white,
-                    ),
-                  ),
-                ),
-              )
             ],
           ),
         ],
